@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 def call() {
-  def file = new File("/usr/sbin/sa")
+  def file = new File("/usr/sbin/sap")
   
   if (file.exists()){
     return true;
