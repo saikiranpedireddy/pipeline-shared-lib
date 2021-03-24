@@ -1,20 +1,14 @@
 #!/usr/bin/env groovy
 
-package com.mcnz
-
-public class fileexists {
+def call() {
+  def file = new File("/usr/sbin/sa")
   
-  def safile() {
-    def file = new File("/usr/sbin/sa")
-  
-    if (file.exists()){
-      return true;
-    }
-    else {
-      echo " security file not exist."
-    }
-  
-    return false;
+  if (file.exists()){
+    return true;
   }
+  else {
+    echo " security file not exist."
+  }
+  return false;
 }
   
